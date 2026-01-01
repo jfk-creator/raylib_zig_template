@@ -6,6 +6,8 @@ const screenHeight = 720;
 
 pub fn main() !void { 
     rl.initWindow(screenWidth, screenHeight, "Template");
+    defer rl.closeWindow();
+
     rl.setTargetFPS(60);
 
     while (!rl.windowShouldClose()) {
